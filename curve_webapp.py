@@ -104,8 +104,11 @@ if Da_deg > 0 and I_deg > 0:
     colA, colB = st.columns(2)
     with colA:
         st.write(f"- **R** = {R:.3f} ft")
+        st.latex(r"R = \frac{18000}{\pi D_a}")
         st.write(f"- **T** = {T:.3f} ft")
+        st.latex(r"T = R \tan\left(\frac{I}{2}\right)")
         st.write(f"- **L** = {L:.3f} ft")
+        st.latex(r"L = \frac{100 I}{D_a}")
     with colB:
         st.write(f"- Sta. **P.C.** = {ft_to_station(PC_station)}")
         st.write(f"- Sta. **P.T.** = {ft_to_station(PT_station)}")
@@ -143,3 +146,4 @@ if Da_deg > 0 and I_deg > 0:
 
 else:
     st.warning("Input I and Dₐ.")
+
